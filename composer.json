@@ -1,7 +1,7 @@
 {
     "name": "robotateme/roles",
     "description": "Powerful package for handling roles and permissions in Laravel 5.",
-    "abandoned": true,
+    "abandoned": false,
     "keywords": [
         "roles",
         "permissions",
