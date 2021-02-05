@@ -1,8 +1,8 @@
 <?php
 
 use App\User;
-use Ultraware\Roles\Models\Permission;
-use Ultraware\Roles\Models\Role;
+use Robotateme\Roles\Models\Permission;
+use Robotateme\Roles\Models\Role;
 
 class PermissionHasRelationsTest extends \TestCase
 {

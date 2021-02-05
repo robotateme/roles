@@ -1,11 +1,11 @@
 <?php
 
-namespace Ultraware\Roles\Models;
+namespace Robotateme\Roles\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Ultraware\Roles\Contracts\RoleHasRelations as RoleHasRelationsContract;
-use Ultraware\Roles\Traits\RoleHasRelations;
-use Ultraware\Roles\Traits\Slugable;
+use Robotateme\Roles\Contracts\RoleHasRelations as RoleHasRelationsContract;
+use Robotateme\Roles\Traits\RoleHasRelations;
+use Robotateme\Roles\Traits\Slugable;
 
 class Role extends Model implements RoleHasRelationsContract
 {

@@ -3,8 +3,8 @@
 use App\User;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
-use Ultraware\Roles\Exceptions\PermissionDeniedException;
-use Ultraware\Roles\Middleware\VerifyPermission;
+use Robotateme\Roles\Exceptions\PermissionDeniedException;
+use Robotateme\Roles\Middleware\VerifyPermission;
 
 class VerifyPermissionTest extends TestCase
 {

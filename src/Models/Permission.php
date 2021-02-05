@@ -1,11 +1,11 @@
 <?php
 
-namespace Ultraware\Roles\Models;
+namespace Robotateme\Roles\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Ultraware\Roles\Contracts\PermissionHasRelations as PermissionHasRelationsContract;
-use Ultraware\Roles\Traits\PermissionHasRelations;
-use Ultraware\Roles\Traits\Slugable;
+use Robotateme\Roles\Contracts\PermissionHasRelations as PermissionHasRelationsContract;
+use Robotateme\Roles\Traits\PermissionHasRelations;
+use Robotateme\Roles\Traits\Slugable;
 
 class Permission extends Model implements PermissionHasRelationsContract
 {

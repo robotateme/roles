@@ -1,11 +1,11 @@
 <?php
 
-namespace Ultraware\Roles\Middleware;
+namespace Robotateme\Roles\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
-use Ultraware\Roles\Exceptions\PermissionDeniedException;
+use Robotateme\Roles\Exceptions\PermissionDeniedException;
 
 class VerifyPermission
 {
@@ -28,10 +28,10 @@ class VerifyPermission
      * Handle an incoming request.
      *
      * @param Request $request
-     * @param \Closure $next
+     * @param Closure $next
      * @param int|string $permission
      * @return mixed
-     * @throws \Ultraware\Roles\Exceptions\PermissionDeniedException
+     * @throws PermissionDeniedException
      */
     public function handle($request, Closure $next, $permission)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ultraware\Roles\Exceptions;
+namespace Robotateme\Roles\Exceptions;
 
 use Exception;
 

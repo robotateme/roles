@@ -1,6 +1,6 @@
 <?php
 
-namespace Ultraware\Roles;
+namespace Robotateme\Roles;
 
 use Illuminate\Support\ServiceProvider;
 

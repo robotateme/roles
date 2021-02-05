@@ -1,11 +1,11 @@
 <?php
 
-namespace Ultraware\Roles\Middleware;
+namespace Robotateme\Roles\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
-use Ultraware\Roles\Exceptions\LevelDeniedException;
+use Robotateme\Roles\Exceptions\LevelDeniedException;
 
 class VerifyLevel
 {
@@ -28,10 +28,10 @@ class VerifyLevel
      * Handle an incoming request.
      *
      * @param Request $request
-     * @param \Closure $next
+     * @param Closure $next
      * @param int $level
      * @return mixed
-     * @throws \Ultraware\Roles\Exceptions\LevelDeniedException
+     * @throws LevelDeniedException
      */
     public function handle($request, Closure $next, $level)
     {

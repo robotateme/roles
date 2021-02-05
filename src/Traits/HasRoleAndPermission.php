@@ -1,6 +1,6 @@
 <?php
 
-namespace Ultraware\Roles\Traits;
+namespace Robotateme\Roles\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use Ultraware\Roles\Models\Permission;
-use Ultraware\Roles\Models\Role;
+use Robotateme\Roles\Models\Permission;
+use Robotateme\Roles\Models\Role;
 
 trait HasRoleAndPermission
 {
@@ -118,15 +118,17 @@ trait HasRoleAndPermission
      * Attach role to a user.
      *
      * @param int|Role $role
-     * @return null|bool
+     * @return bool
      */
-    public function attachRole($role)
+    public function attachRole($role) : bool
     {
         if ($this->getRoles()->contains($role)) {
             return true;
         }
+
         $this->roles = null;
-        return $this->roles()->attach($role);
+        $this->roles()->attach($role);
+        return true;
     }
 
     /**
@@ -157,7 +159,7 @@ trait HasRoleAndPermission
     /**
      * Sync roles for a user.
      *
-     * @param array|\Ultraware\Roles\Models\Role[]|\Illuminate\Database\Eloquent\Collection $roles
+     * @param array|Robotateme\Roles\Models\Role[]|\Illuminate\Database\Eloquent\Collection $roles
      * @return array
      */
     public function syncRoles($roles)
@@ -368,10 +370,10 @@ trait HasRoleAndPermission
         return $this->userPermissions()->detach();
     }
 
+
     /**
      * Sync permissions for a user.
-     *
-     * @param array|\Ultraware\Roles\Models\Permission[]|\Illuminate\Database\Eloquent\Collection $permissions
+     * @param array|Permission[] $permissions
      * @return array
      */
     public function syncPermissions($permissions)
